@@ -90,7 +90,7 @@ $container['csrf'] = function ($container)
 };
 
 $app->add(new \App\Middleware\ValidationErrorsMiddleware($container));
-$app->add(new \App\Middleware\oldInputMiddle($container));
+$app->add(new \App\Middleware\OldInputMiddle($container));
 $app->add(new \App\Middleware\CsrfViewMiddleware($container));
 $app->add($container->csrf);
 
